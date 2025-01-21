@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./img/sitelogo.png" type="image/png" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./img/logo.png" alt="Mercer Logo" class="logo" />
+      <h1>Scholars Program Portfolio</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="about" class="section about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="text">
+            <p>
+              Hi, I’m Prashant Sharma, a passionate tech enthusiast from Nepal.
+              Whether it's coding, AI, or learning, I am constantly driven by
+              curiosity to push the boundaries of innovation. Applying my skills
+              to real-world problems, I am always eager to contribute to
+              projects that make a positive impact.
+            </p>
+            <p>
+              I was very happy to get accepted into Mercer University for Fall
+              2025. And now I am applying to be considered for the Mercer Stamps
+              Scholars Program. Deeply excited to join a community that values
+              innovation and academic excellence, I look forward to contributing
+              to both the university and my field of study.
+            </p>
+          </div>
+          <div class="photo">
+            <img
+              src="./img/mypfp.png"
+              alt="Prashant Sharma"
+              class="profile-photo"
+            />
+          </div>
+        </div>
+        <div class="buttons">
+          <a href="#hobbies" class="btn">Learn More</a>
+          <a href="#projects" class="btn">Accomplishments</a>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-container">
+          <div class="education-item">
+            <img src="./img/sxc.jpg" alt="sxc" class="education-image" />
+            <h3>St. Xavier's College, Maitighar</h3>
+            <p><strong>Degree:</strong> High School Diploma</p>
+            <p><strong>Duration:</strong> 2022 - 2024</p>
+            <p>
+              <strong>Description:</strong> Graduated with 3.88 GPA in Grade 12
+              , actively participated in the Computer Club and Sports Club.
+            </p>
+          </div>
+          <div class="education-item">
+            <img src="./img/deep.jpg" alt="deep" class="education-image" />
+            <h3>Deep Boarding High School</h3>
+            <p><strong>Degree:</strong> Secondary Level Education</p>
+            <p><strong>Duration:</strong> 2015 - 2022</p>
+            <p>
+              <strong>Description:</strong> Graduated with 3.8 GPA in Grade 10 ,
+              actively engaged in the Interact Club and SWAT Club.
+            </p>
+          </div>
+          <div class="education-item">
+            <img
+              src="./img/everest.jpg"
+              alt="School Name 4"
+              class="education-image"
+            />
+            <h3>Everest English Boarding School</h3>
+            <p><strong>Degree:</strong> Junior Level Education</p>
+            <p><strong>Duration:</strong> 2009 - 2015</p>
+            <p>
+              <strong>Description:</strong> Began my official education in
+              kindergarten in 2009, continued to study till Grade 3.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <h2>My Tech Projects</h2>
+        <div class="projects-container">
+          <div class="project-item">
+            <img src="./img/project1.png" alt="Project 1" />
+            <h3>Mini-Games Website</h3>
+            <p>
+              Tired of looking through so many portfolios? I have got the
+              perfect solution. Click on the button below to move to a simple
+              gaming website designed by me where you take a break and enjoy
+              games.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="btn"
+              onclick="showMessage1(event)"
+              >View Project</a
+            >
+          </div>
+          <div class="project-item">
+            <img src="./img/project2.png" alt="Project 2" />
+            <h3>Prashant Clothing Store</h3>
+            <p>
+              Having difficulty in getting new clothes? No worry, we have got
+              you covered. At our store, you are going to find best quality
+              clothes with the best price across the internet. So click on the
+              button below and shop now.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="btn"
+              onclick="showMessage2(event)"
+              >View Project</a
+            >
+          </div>
+          <div class="project-item">
+            <img src="./img/project3.jpg" alt="Project 3" />
+            <h3>RC Plane Workshop</h3>
+            <p>
+              Have a passion for RC planes? Look no further! I had built and
+              operated an RC plane of an impressive glide ratio of 1:6,
+              conceptualized its principles, and mastered the art of flight with
+              an RC plane simulator.
+            </p>
+            <a href="./Project3/page.html" target="_blank" class="btn"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="eca" class="section eca">
+        <h2>Extracurricular Activities</h2>
+        <div class="eca-container">
+          <div class="eca-item">
+            <div class="eca-photo">
+              <img src="./img/codehike.jpg" alt="Code Hikng" />
+            </div>
+            <div class="eca-description">
+              <h3>Code Hiking</h3>
+              <p>
+                Code Hiking was a fun way to engage in sustainability through
+                coding. Our team was given the problem about increasing wastes
+                in mountain regions. As an solution we designed a
+                problem-response website that tracks the concentration of
+                pollution over areas and alerts the authorities of the areas
+                with urgent needed action.
+              </p>
+            </div>
+          </div>
+          <div class="eca-item">
+            <div class="eca-photo">
+              <img src="./img/sciencefest.jpg" alt="ScienceFest" />
+            </div>
+            <div class="eca-description">
+              <h3>Science Festival</h3>
+              <p>
+                Reached to Semi-Finals in a nation wide Science quiz with
+                specifically designed rounds from each subjects: Physics,
+                Chemistry, Biology, Maths and Computer.
+              </p>
+            </div>
+          </div>
+          <div class="eca-item">
+            <div class="eca-photo">
+              <img src="./img/setproject.png" alt="SET Project" />
+            </div>
+            <div class="eca-description">
+              <h3>Social, Environment and Technology (SET) Exhibition</h3>
+              <p>
+                Designed a miniature working model for floating wastes collector
+                boat using Arduino UNO, Motor Drive, easily operatable just
+                through mobile app.
+              </p>
+            </div>
+          </div>
+          <div class="eca-item">
+            <div class="eca-photo">
+              <img src="./img/ict.jpg" alt="ICT Quiz" />
+            </div>
+            <div class="eca-description">
+              <h3>ICT Quiz</h3>
+              <p>
+                Achieved 3rd Runner-Up position in an Inter-school Level ICT
+                Quiz, further improved knowledge in Information and
+                Communication Technology concepts and problem-solving skills.
+              </p>
+            </div>
+          </div>
+          <div class="eca-item">
+            <div class="eca-photo">
+              <img src="./img/python.png" alt="python" />
+            </div>
+            <div class="eca-description">
+              <h3>Python Workshop</h3>
+              <p>
+                Part of 7 Day Python Workshop organized by professionals focused
+                on teaching the fundamental concepts like variables, loops, and
+                functions through hands-on exercises, making it ideal for
+                beginners looking to start their coding journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clubs-leadership" class="section clubs&leadership">
+        <h2>Clubs and Leadership</h2>
+        <div class="club-container">
+          <div class="club-item">
+            <div class="club-logo">
+              <img src="./img/sports.png" alt="Sports Club Logo" />
+            </div>
+            <div class="club-details">
+              <h3>Sports Club</h3>
+              <p>Position: Event Coordinator</p>
+              <p>Tenure: 2023-2024</p>
+              <button class="btn-expand">Read More</button>
+              <div class="club-more-info">
+                <p>
+                  As the Event Coordinator for the Sports Club, I used my
+                  leadership and organizational skills very often. I designed
+                  tie sheets for smooth event scheduling and managed a dedicated
+                  volunteering team on the field during the Annual Sports Week,
+                  making sure the event ran seamlessly. I organized weekly
+                  training sessions to help participants improve their skills
+                  and maintain a competitive spirit. My experience in Sports
+                  Club was really valuable and I hope it to be handy even in my
+                  college life.
+                </p>
+                <div class="club-pictures">
+                  <img src="./img/sports1.jpg" alt="Sports Activity 1" />
+                  <img src="./img/sports2.jpg" alt="Sports Activity 2" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="club-item">
+            <div class="club-logo">
+              <img src="./img/computer.png" alt="Computer Club Logo" />
+            </div>
+            <div class="club-details">
+              <h3>Computer Club SX3C</h3>
+              <p>Position: Active Member</p>
+              <p>Tenure: 2022-2023</p>
+              <button class="btn-expand">Read More</button>
+              <div class="club-more-info">
+                <p>
+                  As a dedicated member of the Computer Club, I actively
+                  participated in Tech Day, where I volunteered to assist in
+                  event organization and execution. I was also part of the Web
+                  Development House, collaborating on projects that enhanced my
+                  skills in web design and development. My involvement in the
+                  club allowed me to sharpen my tech skills
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="club-item">
+            <div class="club-logo">
+              <img src="./img/swat.png" alt="SWAT Club Logo" />
+            </div>
+            <div class="club-details">
+              <h3>SWAT (Students Working on Advance Technology) Club</h3>
+              <p>Position: Executive Committee</p>
+              <p>Tenure: 2021-2022</p>
+              <button class="btn-expand">Read More</button>
+              <div class="club-more-info">
+                <p>
+                  As a club reinstating member, I demonstrated exceptional
+                  leadership to revive the club despite its period of
+                  inactivity. Taking the initiative, I gathered and motivated
+                  students to join, increasing interest in technology-focused
+                  extracurricular activities. We organized events like a
+                  Presentation Competition on the 'Working Cycle of Computers'
+                  and facilitated a session with Colleen Galloway on 'Innovate &
+                  Educate', which inspired innovative thinking among members.
+                  Additionally, I led brainstorming meetings to generate fresh
+                  ideas.
+                </p>
+                <div class="club-pictures">
+                  <img src="./img/swat1.jpg" alt="SWAT Activity 1" />
+                  <img src="./img/swat2.png" alt="SWAT Activity 2" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="club-item">
+            <div class="club-logo">
+              <img src="./img/interact.png" alt="Interact Club Logo" />
+            </div>
+            <div class="club-details">
+              <h3>Interact Club</h3>
+              <p>Position: Sergeant at Arms</p>
+              <p>Tenure: 2020-2021</p>
+              <button class="btn-expand">Read More</button>
+              <div class="club-more-info">
+                <p>
+                  As the Sergeant-at-Arms, I maintained order and decorum during
+                  meetings, ensuring smooth transitions between activities,
+                  managing the entrance and exit of participants, and generally
+                  overseeing the logistics of the event to keep things running
+                  smoothly. I managed logistics for the Presentation Competition
+                  on 'Impacts of Social Media'. I led the execution of online
+                  COVID awareness campaigns, spreading critical safety messages
+                  during the pandemic.
+                </p>
+                <div class="club-pictures">
+                  <img src="./img/interact1.jpg" alt="Interact Activity 1" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community-service" class="section community-service">
+        <h2>Community Service & Volunteering</h2>
+        <div class="volunteer-container">
+          <button class="scroll-button left" id="prev-activity">←</button>
+          <div class="volunteer-content">
+            <div class="volunteer-item active">
+              <div class="volunteer-images">
+                <div class="media-container">
+                  <video class="media" controls>
+                    <source src="./img/ric1.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <img src="./img/ric2.jpg" alt="RIC 2" />
+              </div>
+              <div class="volunteer-details">
+                <h3>Rural Immersion Camp</h3>
+                <p>Date: August 2023</p>
+                <p>
+                  We went on Rural Immersion Camp to Shree Bhimeshwori Secondary
+                  School and organized various activities. I personally was part
+                  of Workshop team where I made students aware about 'Mental
+                  Health and Bullying'. Besides that, I also took part in
+                  cooking meals, cleaning the classes and sanitizing the
+                  washrooms. One of my favorite memory of RIC was seeing
+                  children enjoy playing Musical Chair.
+                </p>
+              </div>
+            </div>
+            <div class="volunteer-item">
+              <div class="volunteer-images">
+                <img src="./img/acc1.JPG" alt="ACC 1" />
+                <img src="./img/acc2.JPG" alt="ACC 2" />
+              </div>
+              <div class="volunteer-details">
+                <h3>Visit to Autism Care Center</h3>
+                <p>Date: July 2023</p>
+                <p>
+                  Our class went to Autism Care Center on the St. Ignatius Day.
+                  We were warm welcomed by the teachers there and was made
+                  familiar about Autism in brief. We organized several funs
+                  activites such as singing, dancing, playing games and more. I
+                  was also responsible for teaching origami to students there. I
+                  felt the warmt as I spent my time there seeing them smile and
+                  grasp the things in their own way.
+                </p>
+              </div>
+            </div>
+            <div class="volunteer-item">
+              <div class="volunteer-images">
+                <img src="./img/volunteer1.jpg" alt="Volunteering 1" />
+                <img src="./img/volunteer2.jpg" alt="ACC 2" />
+              </div>
+              <div class="volunteer-details">
+                <h3>SXC Entrance Exam Volunteering</h3>
+                <p>Date: August 2024</p>
+                <p>
+                  I volunteered during the Grade 11 entrance exams, which had
+                  over 10,000 participants. My responsibility was assigning
+                  volunteers to their individual classes, managing seat plans in
+                  my floor, and guiding students to their respective exam
+                  classes. Overall the program ended up being smooth and went on
+                  in an organized process. This experience improved my
+                  leadership and organizational skills.
+                </p>
+              </div>
+            </div>
+            <!-- Add more volunteer items as needed -->
+          </div>
+          <button class="scroll-button right" id="next-activity">→</button>
+        </div>
+      </section>
+
+      <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="education-container">
+          <div class="education-item">
+            <img src="./img/hike.JPG" alt="Hobby 1" class="education-image" />
+            <h3>Hiking</h3>
+            <p>
+              I really love hiking to the hilly areas where I can explore the
+              beauty of mother nature. A little titbit about above picture, its
+              the picture when me and my friends went to Sundarijal, we got lost
+              from our original tracks and wandered around for hours pointlessly
+              that day. Night came upon us as we exited from the trail.
+            </p>
+          </div>
+          <div class="education-item">
+            <img src="./img/chess.jpg" alt="Hobby 2" class="education-image" />
+            <h3>Playing Chess</h3>
+            <p>
+              I liked playing chess from my childhood. The image shown above is
+              the game cover of 'Majestic Chess', it was the first ever chess
+              game I played. I liked it since it used story telling approach and
+              also had many interesting puzzles. Perfect game to learn about
+              chess.
+            </p>
+          </div>
+          <div class="education-item">
+            <img
+              src="./img/cricket.jpg"
+              alt="Hobby 3"
+              class="education-image"
+            />
+            <h3>Playing Cricket</h3>
+            <p>
+              Playing cricket always took away my stress and distracted me from
+              my problem, so, it holds a significance for me. In the picture,
+              above I played one of my finest game scoring about 57 runs in 30
+              balls being the last man standing in the team. Even though I never
+              played in any official game, the gully cricket was fun.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="personal-experiences">
+        <h2>Expresing Myself</h2>
+        <div class="experience-container">
+          <p>
+            Since my childhood, I was always fund of computers. From struggling
+            to buy a computer to now applying to study Computer Science in my
+            undergraduate, the journey was really full of ups and downs. From
+            the troubles when I crashed the computer to the joy of playing games
+            in it, everything was sweet experience that led me to this future.
+          </p>
+          <p>
+            There isn't just a single experience that got me interested in
+            studying computer science, but multiple. Coding has been something I
+            enjoyed due the problem solving skill it required. Building my first
+            site about me and my family to now building a site for presenting
+            myself for scholarship, I feel like nothing has changed yet it is
+            the beginning to the change that will take place in future.
+          </p>
+          <p>
+            In Mercer University, I hope to pursue my interest with complete
+            passion. I will take my academics not just as academics but
+            something fun and enjoyable acitivty. I wish to make the most of my
+            time I spend in my studies. Not only do I wish to study but also
+            contribute to the mercer community as much as I can. I wish to
+            uphold the value Mercer has been strictly following as I embark in
+            my journey in solving real-world problems with the helps of computer
+            science.
+          </p>
+          <p>
+            For this, I believe being a part of Scholars Program might give me a
+            new opportunity to make my education at Mercer affordable. Despite
+            belonnging to a poor background, the drive I have towards computer
+            science is really high and no matter what I wish to pursue this
+            field. Even though I might not be perfect enough to have remarkable
+            feats in the field but I believe my time in Mercer will make me fit
+            to excel very well.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <p>
+          Email:
+          <a href="mailto:prashant.shar51@example.com"
+            >prashant.shar51@gmail.com</a
+          >
+        </p>
+        <p>Phone: +977 974 235 2700</p>
+        <p>
+          Follow me on:
+          <a
+            href="https://www.facebook.com/profile.php?id=100035129932710"
+            target="_blank"
+            >Facebook</a
+          >
+        </p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>
+        &copy; 2025 Prashant Sharma. The site was made possible using HTML, CSS
+        and JavaScript.
+      </p>
+    </footer>
+
+    <script>
+      function showMessage1(event) {
+        event.preventDefault(); // Prevents the default link behavior
+        alert(
+          "Due to difficulty in hosting a website with a database, some features (features implemented using backend) of the website won't be accessible."
+        );
+        window.open("./Project1/mainpage.html", "_blank");
+      }
+
+      function showMessage2(event) {
+        event.preventDefault(); // Prevents the default link behavior
+        alert(
+          "Due to difficulty in hosting a website with a database, some features (features implemented using backend) of the website won't be accessible."
+        );
+        window.open("./Project2/shop.html", "_blank");
+      }
+      document.querySelectorAll(".btn-expand").forEach((button) => {
+        button.addEventListener("click", () => {
+          const moreInfo = button.nextElementSibling;
+          if (moreInfo.style.display === "block") {
+            moreInfo.style.display = "none";
+            button.textContent = "Read More";
+          } else {
+            moreInfo.style.display = "block";
+            button.textContent = "Read Less";
+          }
+        });
+      });
+
+      const items = document.querySelectorAll(".volunteer-item");
+      let currentIndex = 0;
+
+      document.getElementById("prev-activity").addEventListener("click", () => {
+        items[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        items[currentIndex].classList.add("active");
+      });
+
+      document.getElementById("next-activity").addEventListener("click", () => {
+        items[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].classList.add("active");
+      });
+    </script>
+  </body>
+</html>
