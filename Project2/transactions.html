@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard - Prasis Clothing Store</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+    />
+    <link rel="stylesheet" href="styleUser.css" />
+  </head>
+  <body class="dashboard-page">
+    <div class="sidebar">
+      <div class="site-name">
+        <i class="fas fa-arrow-left"> </i>
+        <submit type="button" onclick="back()">Dashboard </submit>
+      </div>
+      <a href="account.html">Account Info</a>
+      <div class="sub-section">
+        <submit onclick="reload()"
+          ><a href="#">Account Credentials <i class="fas fa-user"></i></a>
+        </submit>
+      </div>
+      <div class="sub-section">
+        <a href="#">Change Password <i class="fas fa-lock"></i></a>
+      </div>
+      <div class="sub-section">
+        <a href="#">Analytics <i class="fas fa-chart-bar"></i></a>
+      </div>
+      <a href="#" class="active">Transactions</a>
+      <div class="sub-section">
+        <a href="#">Recent Buyouts <i class="fas fa-shopping-bag"></i></a>
+      </div>
+      <div class="sub-section">
+        <submit onclick="cart()">
+          <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+        </submit>
+      </div>
+      <div class="sub-section">
+        <submit onclick="payment()">
+          <a href="#">Payments <i class="fas fa-credit-card"></i></a>
+        </submit>
+      </div>
+      <a href="#">Notifications</a>
+      <div class="sub-section">
+        <a href="#">Messages <i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="sub-section">
+        <a href="#">Updates <i class="fas fa-bell"></i></a>
+      </div>
+      <a href="#" class="logout-btn"
+        >Logout <i class="fas fa-sign-out-alt"></i
+      ></a>
+    </div>
+
+    <div class="content">
+      <h1 id="title">Shopping Cart</h1>
+      <br />
+      <div id="cart">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Product Name</th>
+              <th>Specifications</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>101</td>
+              <td>Women's Jacket</td>
+              <td>XL</td>
+              <td>$1000</td>
+              <th>1</td>
+              <td>Remove</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="total-price"><strong>Total Payout:</strong> $1000</div>
+
+        <button class="checkout-btn">Head to Payment</button>
+      </div>
+      <div id="payment" style="display: none">
+        <form id="shipping-form" action="shipping.html" method="post">
+          <div style="padding: 10px">
+            <label for="name"><strong>Shipping Address:</strong></label>
+            <input
+              type="text"
+              id="shipping-address"
+              name="shipping-address"
+              required
+            />
+          </div>
+          <div style="padding: 10px">
+            <label for="state"><strong>Shipping State:</strong></label>
+            <input
+              type="text"
+              id="shipping-state"
+              name="shipping-state"
+              required
+            />
+          </div>
+          <div style="padding: 10px">
+            <label for="name"><strong>Shipping City:</strong></label>
+            <input
+              type="text"
+              id="shipping-city"
+              name="shipping-city"
+              required
+            />
+          </div>
+          <div style="padding: 10px">
+            <label for="name"><strong>Postal Code:</strong></label>
+            <input type="text" id="postal-code" name="postal-code" required />
+          </div>
+          <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        <div id="payment-method">
+          <label for="payment-options">Payment Options:</label>
+          <select id="payment-options" onchange="selectPaymentOption()">
+            <option
+              value="esewa"
+              style="background-color: #4caf50; color: #ddd"
+            >
+              Pay by Esewa
+            </option>
+            <option
+              value="khalti"
+              style="background-color: #750192; color: #ddd"
+            >
+              Pay by Khalti
+            </option>
+          </select>
+          <img
+            id="payment-image"
+            src="./images/esewa.webp"
+            alt="Payment Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function reload() {
+        location.reload();
+      }
+      function back() {
+        window.location.href = "shop.html";
+      }
+      function payment() {
+        document.getElementById("payment").style.display = "";
+        document.getElementById("cart").style.display = "none";
+        document.getElementById("title").innerHTML = "Payment";
+      }
+      function cart() {
+        document.getElementById("payment").style.display = "none";
+        document.getElementById("cart").style.display = "";
+        document.getElementById("title").innerHTML = "Shopping Cart";
+      }
+      function selectPaymentOption() {
+        var selectedOption = document.getElementById("payment-options").value;
+        if (selectedOption == "esewa") {
+          document.getElementById("payment-image").src = "./images/esewa.webp";
+        } else {
+          document.getElementById("payment-image").src = "./images/khalti.webp";
+        }
+      }
+    </script>
+  </body>
+</html>

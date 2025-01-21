@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard - Prasis Clothing Store</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+    />
+    <link rel="stylesheet" href="styleUser.css" />
+  </head>
+  <body class="dashboard-page">
+    <div class="sidebar">
+      <div class="site-name">
+        <i class="fas fa-arrow-left"> </i>
+        <submit type="button" onclick="back()">Dashboard </submit>
+      </div>
+      <a href="#" class="active">Account Info</a>
+      <div class="sub-section">
+        <submit onclick="reload()"
+          ><a href="#">Account Credentials <i class="fas fa-user"></i></a>
+        </submit>
+      </div>
+      <div class="sub-section">
+        <submit onclick="updatePass()">
+          <a href="#">Change Password <i class="fas fa-lock"></i></a>
+        </submit>
+      </div>
+      <div class="sub-section">
+        <a href="#">Analytics <i class="fas fa-chart-bar"></i></a>
+      </div>
+      <a href="transactions.html">Transactions</a>
+      <div class="sub-section">
+        <a href="#">Recent Buyouts <i class="fas fa-shopping-bag"></i></a>
+      </div>
+      <div class="sub-section">
+        <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+      </div>
+      <div class="sub-section">
+        <a href="#">Payments <i class="fas fa-credit-card"></i></a>
+      </div>
+      <a href="#">Notifications</a>
+      <div class="sub-section">
+        <a href="#">Messages <i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="sub-section">
+        <a href="#">Updates <i class="fas fa-bell"></i></a>
+      </div>
+      <a href="#" class="logout-btn"
+        >Logout <i class="fas fa-sign-out-alt"></i
+      ></a>
+    </div>
+
+    <div class="content">
+      <h1 id="title">Account Credentials</h1>
+      <div id="creds">
+        <div class="dashboard-content">
+          <div
+            class="avatar-placeholder"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <i
+              class="fas fa-user-circle"
+              style="font-size: 100px; color: #333"
+            ></i>
+          </div>
+
+          <div style="padding: 10px"><strong>Name:</strong> Mary Smith</div>
+          <div style="padding: 10px">
+            <strong>Email:</strong> marrysmith@gmail.com
+          </div>
+          <div style="padding: 10px">
+            <strong>Phone Number:</strong> +01 90219884098
+          </div>
+          <div style="padding: 10px"><strong>Age:</strong> 20 </div>
+          <div style="padding: 10px"><strong>Sex:</strong> Female </div>
+
+          <div style="margin-top: 20px">
+            <button class="btn btn-primary" id="editCreds" onclick="edit()">
+              Edit Credentials
+            </button>
+            <button
+              class="btn btn-danger"
+              style="margin-left: 10px"
+              id="deleteCreds"
+              onclick="del()"
+            >
+              Delete Account
+            </button>
+            <form action="logout.php">
+            <button
+              class="btn btn-danger"
+              style="margin-left: 10px"
+              id="deleteCreds"
+              onclick="del()"
+            >
+              Log Out
+            </button>
+            <form>
+          </div>
+        </div>
+      </div>
+      <div id="editAcc" style="display: none">
+        <form
+          class="dashboard-content"
+          id="editForm"
+          method="POST"
+          action="editacc.php"
+        >
+          <div
+            class="avatar-placeholder"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <i
+              class="fas fa-user-circle"
+              style="font-size: 100px; color: #333"
+            ></i>
+          </div>
+
+          <div style="padding: 10px">
+            <label for="name"><strong>First Name:</strong></label>
+            <input type="text" id="fname" name="fname" value=" Marry" required />
+          </div>
+          <div style="padding: 10px">
+            <label for="name"><strong>Last Name:</strong></label>
+            <input type="text" id="lname" name="lname" value="Smith" required />
+          </div>
+
+          <div style="padding: 10px">
+            <label for="age"><strong>Age:</strong></label>
+            <input type="number" id="age" name="age" value="20" required />
+          </div>
+
+          <div style="padding: 10px">
+            <label for="sex"><strong>Sex:</strong></label>
+            <select id="sex" name="sex" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div style="padding: 10px">
+            <label for="password"><strong>Password:</strong></label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+
+          <div style="margin-top: 20px">
+            <button class="btn btn-success" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="pass" style="display: none">
+        <form
+          id="passwordChangeForm"
+          class="dashboard-content"
+          onsubmit="return validateForm()"
+          method="POST"
+          action="changepass.php"
+        >
+          <div
+            class="avatar-placeholder"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <i
+              class="fas fa-user-circle"
+              style="font-size: 100px; color: #333"
+            ></i>
+          </div>
+          <div style="padding: 10px">
+            <label for="password"><strong> Current Password:</strong></label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div style="padding: 10px">
+            <label for="newPassword"><strong>New Password:</strong></label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              required
+            />
+          </div>
+          <div style="margin-top: 20px">
+            <button class="btn btn-success" type="submit">
+              Change Password
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="delAcc" style="display: none">
+        <form action="deleteacc.php" class="dashboard-content">
+          <div
+            class="avatar-placeholder"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <i
+              class="fas fa-user-circle"
+              style="font-size: 100px; color: #333"
+            ></i>
+          </div>
+          <div style="padding: 10px">
+            <label for="confirm"
+              ><strong> Do you want to delete your account?</strong></label
+            >
+            <br />
+            <input
+              type="checkbox"
+              id="yesCheckbox"
+              name="yesCheckbox"
+              value="yes"
+            />
+            Yes
+          </div>
+          <div style="padding: 10px">
+            <label for="password"
+              ><strong> Enter Your Current Password:</strong></label
+            >
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div style="margin-top: 20px">
+            <button class="btn btn-success" type="submit">
+              Delete Account
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // DOM Elements
+      changecreds = document.getElementById("editAcc");
+      remove = document.getElementById("delAcc");
+      creds = document.getElementById("creds");
+      pass = document.getElementById("pass");
+
+      function edit() {
+        creds.style.display = "none";
+        changecreds.style.display = "";
+      }
+      function updatePass() {
+        creds.style.display = "none";
+        pass.style.display = "";
+        document.getElementById("title").innerHTML = "Change Password";
+      }
+      function del() {
+        creds.style.display = "none";
+        remove.style.display = "";
+      }
+      function reload() {
+        location.reload();
+      }
+      function back() {
+        window.location.href = "shop.html";
+      }
+
+      function validateForm() {
+        var currentPassword = document.getElementById("currentPassword").value;
+        var newPassword = document.getElementById("newPassword").value;
+
+        if (currentPassword === "" || newPassword === "") {
+          alert("Please fill in both fields.");
+          return false;
+        }
+        if (newPassword.length < 8) {
+          alert("Ensure new password is over 8 characters!");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

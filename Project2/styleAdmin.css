@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to fill the screen */
+}
+
+.sidebar {
+  width: 220px; /* Width of the sidebar */
+  height: 100vh;
+  background-color: #870dd8; /* Dark blue background color */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Make the sidebar fixed */
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff; /* White text color */
+  font-size: 1.2em;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #350066; /* Darker blue background color on hover */
+}
+
+.sidebar .active {
+  background-color: #350066; /* Darker blue background color for active link */
+}
+
+.content {
+  padding: 20px;
+  margin-left: 220px; /* Adjust the margin to avoid overlapping with the fixed sidebar */
+  background-color: #141313f6; /* White background color for content */
+  background-position: 100%;
+  color: #eee9e9; /* Dark text color for content */
+  height: 260vh;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+th,
+td {
+  border: none; /* Remove borders */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+}
+.custom-input {
+  display: inline-block;
+  padding: 8px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  color: #f2f2f2;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 50%;
+
+  padding: 0;
+  margin: 0;
+}
+.remove-btn:hover {
+  background-color: #329632; /* Red color for Remove button */
+  color: #fcf5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.site-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #cfcece; /* White text color for site name */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Glow in dark shadow */
+}
+
+.dashboard-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sub-section {
+  margin-left: 20px;
+}
+
+.sub-section a {
+  color: #a7a3a3; /* Dark text color for sub-section links */
+  font-size: 1em;
+}
+
+.sub-section a:hover {
+  color: #000000e3;
+}
+
+.product-placeholder {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.product-placeholder:hover {
+  background-color: #9421ff79; /* Highlight color on hover */
+}
+img {
+  max-width: 20%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.edit-button {
+  position: relative;
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+h3,
+p {
+  margin: 0;
+}

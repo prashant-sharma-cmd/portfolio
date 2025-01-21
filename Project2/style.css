@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to fill the screen */
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #333; /* Dark background color */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Make the sidebar fixed */
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 1.2em;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #555; /* Darker background color on hover */
+}
+
+.sidebar .active {
+  background-color: #555; /* Darker background color for active link */
+}
+
+.footer {
+  padding: 10px;
+  background-color: #333; /* Dark background color for footer */
+  color: #fff; /* White text color for footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-icon {
+  margin-right: 5px;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 260px; /* Adjust the margin to avoid overlapping with the fixed sidebar */
+}
+
+.site-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #0000008f; /* Black text color for site name */
+  text-shadow: 2px 2px 4px rgba(58, 56, 56, 0.918); /* Glow in dark shadow */
+  padding-left: 5px;
+}
+
+.dashboard-options {
+  display: none; /* Hide the options by default */
+}
+
+.dashboard:hover .dashboard-options {
+  display: block; /* Show the options on hover */
+  position: absolute;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 180px; /* Adjust the position as needed */
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.dashboard-options a {
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.fashion-section {
+  margin-bottom: 30px;
+}
+
+.fashion-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-placeholder {
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 45%;
+}
+
+.product-image {
+  max-width: 75%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn,
+.see-details-btn {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover,
+.see-details-btn:hover {
+  background-color: #2980b9;
+}
+.about-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+.section-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 50px; /* Adjust the width of the image */
+  height: 50px; /* Adjust the height of the image */
+  border-radius: 50%; /* Make the image circular */
+  margin-right: 10px;
+}
+
+.team-member-description {
+  flex: 1;
+}
+.help-content {
+  font-size: 1.2em;
+  line-height: 1.6;
+}

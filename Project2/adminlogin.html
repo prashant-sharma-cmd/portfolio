@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Your Website</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        height: 100vh;
+        background-image: url("./images/adminbg.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .transparent-box {
+        background-color: rgba(0, 0, 0, 0.459);
+        padding: 20px;
+        border-radius: 10px;
+        width: 500px;
+      }
+
+      .site-name {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .login-form {
+        text-align: left;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-control {
+        width: 100%;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2em;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-btn:hover {
+        background-color: #2980b9;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container transparent-box">
+      <div class="site-name">Login to Admin Dashboard</div>
+      <form class="login-form" method="POST" action="checkadminlogin.php">
+        <div class="form-group">
+          <label for="phonenum">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary login-btn">
+          Login
+        </button>
+        <div class="footer">
+          Not a Admin User? <a href="shop.html"> Return Back!</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
