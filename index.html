@@ -519,20 +519,6 @@
 
     <script>
       function showMessage1(event) {
-        event.preventDefault(); // Prevents the default link behavior
-        alert(
-          "Due to difficulty in hosting a website with a database, some features (features implemented using backend) of the website won't be accessible."
-        );
-        window.open("./Project1/mainpage.html", "_blank");
-      }
-
-      function showMessage2(event) {
-        event.preventDefault(); // Prevents the default link behavior
-        alert(
-          "Due to difficulty in hosting a website with a database, some features (features implemented using backend) of the website won't be accessible."
-        );
-        window.open("./Project2/shop.html", "_blank");
-      }
       document.querySelectorAll(".btn-expand").forEach((button) => {
         button.addEventListener("click", () => {
           const moreInfo = button.nextElementSibling;
